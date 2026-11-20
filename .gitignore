@@ -1,20 +1,18 @@
-# Python Environments
+# Virtual environments & caches
 venv/
-env/
+.venv/
 __pycache__/
 *.py[cod]
-*$py.class
+.pytest_cache/
 
-# Project Specific Data & Mock Repos
+# Local test artifacts, databases & mock backup data
+*.duckdb
+*.duckdb.wal
 test_repo/
 mock_data/
-sandbox/
-drills.duckdb*
-
-# OS Generated
-.DS_Store
-Thumbs.db
-
-# Secrets & Local Configs
-.env
 drill.yml
+
+# OS & editor files
+.DS_Store
+.vscode/
+.idea/

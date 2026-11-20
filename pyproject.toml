@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "restore-drill"
+version = "0.1.0"
+description = "Automated backup restore verification, RTO/RPO grading, and drill history tracker"
+requires-python = ">=3.11"
+dependencies = [
+    "duckdb>=1.1.0",
+    "pyyaml>=6.0",
+    "typer>=0.12.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["drill*", "cli*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
